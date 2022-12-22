@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>XYZ-Student Registration</title>
+
+    <style>
+        table{
+            width:100%;
+            border-width: 1px; 
+            border-style: solid; 
+            border-color: black;
+        } 
+        table th,table td{            
+            border-width:1px; 
+            border-style: solid; 
+            border-color: black; 
+            padding: 3px 5px;
+        } 
+        .btn {
+            text-align: center;
+        }
+        
+    </style>
+
+</head>
+<div class="container">
+    <section>
+        <form action="">
+            <table>
+                <tr>
+                    <th colspan="3">XYZ University Student Registration</th>
+                </tr>
+                <tr>
+                    <td style="width: 20%;" rowspan="4">Personal Details</td>
+                    <td style="width: 30%;" class="required">First Name</td>
+                    <td>
+                        <input type="text" name="first_name"" >
+                    </td>            
+                </tr>
+                <tr>
+                    <td class="required">Last Name</td>
+                    <td>
+                        <input type="text" name="last_name"  >
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required">Date of Birth</td>
+                    <td>
+                        <input type="text" name="dob" id="dob" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="html">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" >
+                        <label for="html">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="html">Other</label>
+                    </td>
+                </tr>   
+    
+                <tr>
+                    <td rowspan="4">Academic Details</td>
+                    <td>Degree</td>
+                    <td>
+                        <select name="degree" id="degree">
+                            <option value="bachelors">Bachelors</option>
+                            <option value="masters" selected>Masters</option>
+                            <option value="doctorate">Doctorate</option>
+                        </select>
+                    </td>            
+                </tr>
+                <tr>
+                    <td class="required">Specialization</td>
+                    <td>
+                        <input type="text" name="specialization" id="specialization" value="English Literature" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mode of instruction</td>
+                    <td>
+                        <input type="checkbox" id="classroom" name="classroom" value="classroom" checked>
+                        <label for="vehicle1">Classroom</label>
+                        <input type="checkbox" id="online" name="online" value="online">
+                        <label for="vehicle2">Online</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="required">Current GPA</td>
+                    <td>
+                        <input type="number" name="gpa" id="gpa" max="5"  >
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td style="width: 20%;" rowspan="2">Contact Details</td>
+                    <td style="width: 30%;" class="required">Phone Number</td>
+                    <td>
+                       <input type="tel" name="phone" id="phone"  >
+                    </td>            
+                </tr>
+                <tr>
+                    <td class="required">Address</td>
+                    <td>
+                        <textarea name="address" id="address" cols="100" rows="4" maxlength="40" ></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th colspan="3">
+                        I assure all the details enterd are correct: 
+                        <input type="checkbox" name="consent" id="consent" checked>
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="3" class="btn">
+                        <input  type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>XYZ Online Delivery</title>
+    <style>
+        table{
+            width:100%;
+            border-width: 1px; 
+            border-style: solid; 
+            border-color: black;
+        } 
+        table th,table td{            
+            border-width: 1px; 
+            border-style: solid; 
+            border-color: black; 
+            padding: 3px 5px;
+        }
+        .btn-submit {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <form action="">
+                <table>
+                    <tr>
+                        <th colspan="3">XYZ Online Delivery</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Personal Details</th>
+                    </tr>
+                    <tr>
+                        <td class="required">First Name</td>
+                        <td>
+                            <input type="text" name="first_name" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="required">Phone Number</td>
+                        <td>
+                            <input type="tel" name="phone" id="phone"  >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Order Preferences</th>
+                    </tr>
+                    <tr>
+                        <td class="required">Size</td>
+                        <td>
+                            <input type="radio" id="small" name="size" value="small" >
+                            <label for="html">Small</label>
+                            <input type="radio" id="medium" name="size" value="medium" checked>
+                            <label for="html">Medium</label>
+                            <input type="radio" id="large" name="size" value="large">
+                            <label for="html">Large</label>
+                        </td>                
+                    </tr>
+                    <tr>
+                        <td class="required">Base</td>
+                        <td>
+                            <select name="degree" id="degree" required>
+                                <option value="chicken-stuffed-crust" selected>Chicken Stuffed Crust</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Toppings</td>
+                        <td>
+                            <input type="checkbox" id="cheese" name="cheese" value="cheese">
+                            <label for="cheese">Cheese</label>
+                            <input type="checkbox" id="olives" name="olives" value="olives">
+                            <label for="olives">Olives</label>
+                            <input type="checkbox" id="tomatoes" name="tomatoes" value="tomatoes">
+                            <label for="tomatoes">Tomatoes</label>
+                            <input type="checkbox" id="capsicum" name="capsicum" value="capsicum" checked>
+                            <label for="capsicum">Capsicum</label>
+                            <input type="checkbox" id="jalapenos" name="jalapenos" value="jalapenos">
+                            <label for="jalapenos">Jalapenos</label>
+                            <input type="checkbox" id="mushrooms" name="mushrooms" value="mushrooms">
+                            <label for="mushrooms">Mushrooms</label>
+                            <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
+                            <label for="pepperoni">Pepperoni</label>
+                            <input type="checkbox" id="onion" name="onion" value="onion">
+                            <label for="onion">Onion</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Additional details</td>
+                        <td>
+                            <textarea name="details" id="details" cols="90" rows="2"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">
+                            Confirm details and Proceed to pay? 
+                            <input type="radio" id="yes" name="confirm" value="yes" checked>
+                            <label for="html">Yes</label>
+                            <input type="radio" id="no" name="confirm" value="no" >
+                            <label for="html">No</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="btn-submit">
+                            <input  type="submit" value="Submit">
+                        </td>
+                    </tr>
+                   
+                </table>
+            </form>
+        </section>
+    </div>
+    
+</body>
+</html>

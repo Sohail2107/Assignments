@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Contact Us Page</title>
+ <style>
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    
+}
+.requestpage{
+    width:40rem;
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-left: 6rem;
+    padding-left: 3rem;
+    font-family: cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.rpheading, label{
+    color:blue;
+}
+.reachus{
+    background-color: blue;
+    width:30rem;
+    color:#fff;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+   padding-left: 3rem;
+    font-family: cursive;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.content1{
+    display: flex;
+}
+.btn1{
+    background-color: blue;
+    color:#fff;
+    border: none;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 16px;
+    margin: 10px 0px 10px 0px;
+    font-family: cursive;
+}
+.requestpage1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+input[type=text] {
+  width: 70%;
+  
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+#details{
+    margin: 0px;
+    width: 100%;
+}
+h1{
+   font-size: 3rem;
+   font-family: 'Times New Roman', Times, serif;
+   margin-left: 6rem;
+}
+p{
+    font-size: 1rem;
+   font-family: 'Times New Roman', Times, serif;
+   
+   padding:0;
+   margin: 0 0 0 96px;
+}
+ </style>   
+</head>
+<body>
+    
+    <div class="container">
+     <h1>Connect With Us</h1>
+      <p>We would love to respond to your queries and help you succeed.</p>
+      <p>Feel free to get in touch with us.</p>
+
+      <div class="content1">
+     <div class="requestpage">
+         <h3 class="rpheading">Send your request</h3>
+         <form id="registration_form" method="POST">
+         <div class="requestpage1">
+             <div>
+            <label>Name</label><br>
+            <input type="text" name="full_name"  value="John Amendo" class="boxfield1" ><br>
+        </div>
+        <div>
+            <label>Phone</label><br>
+            <input type="text" name="phone" value="+1 345 543 2323" class="boxfield2" ><br>
+          </div>
+          <div>
+            <label>Email</label><br>
+            <input type="text" name="email"  value="johnamendo@gmail.com" class="boxfield3"><br> 
+        </div>
+        <div>
+            <label>Subject</label><br>
+            <input type="text" name="subject"  value="Product Demo" class="boxfield4"><br>
+        </div>   
+            <label>Message</label><br>
+            <!-- <input type="text" name="subject"  value="" class="boxfield4"><br> -->
+            <textarea name="details" id="details" rows="4" cols="60" >Your Message</textarea><br>
+                
+            <button type="submit" class="btn1" name="submit">SEND</button>
+        </div>  
+          </form>
+
+     </div>
+
+     <div class="reachus">
+      <h3>Reach Us</h3>
+      
+      <table>
+      <tr>
+      <td>Email</td>
+      <td>contactus@example.com</td>
+      </tr>
+      <tr>
+      <td>Phone number</td>
+      <td>+1 0102 345 6789</td>
+      </tr>
+      <tr>
+      <td>Address</td>
+      <td>Bengaluru 560001</td>
+      </tr>
+      </table>
+
+     </div>
+    </div>
+
+
+
+
+
+    </div>
+
+</body>
+</html>
