@@ -411,9 +411,19 @@ Cocktail
 }
 
 .container{
-  margin:auto;
-  width: 50%;
+  /* margin:auto; */
+   /* width: 80%;  */
+  
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+}
+.div1{
+  width:50%;
+  /* width: 30rem; */
+  margin-left: 20px;
   background-color: lightsalmon;
+  margin-top: 10px;
 }
 h1,h2{
   text-align: center;
@@ -443,4 +453,29 @@ p{
 .box1{
   
   height: 3rem;
+}
+.view-post{
+ margin-top: 10px;
+ margin-left: 20px;
+  background-color: lightblue;
+  /* width: auto; */
+  width: 30rem;
+  height: 15rem;
+  
+}
+
+.view-post p{
+  text-align: left;
+  font-weight: 700;
+}
+.update-div{
+  background-color: lightblue;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#fname{
+  margin-left: 70px;
+}
+#descrip{
+  margin-left: 35px;
 }

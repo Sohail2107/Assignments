@@ -4,6 +4,9 @@ import Axios from 'axios';
 const baseUrl = "http://localhost:3001/posts";
 const [postArr,setPostArr] = useState([]);
 const [post, setPost] = React.useState(null);
+const [postdetail, setPostDetail] = useState([]);
+const [isShown, setIsShown] = useState(true);
+const [updateisShown, setUpdateisShown] = useState(true);
 useEffect(()=>{
     Axios.get(baseUrl).then((response)=>{
         setPostArr(response.data);
@@ -11,38 +14,69 @@ useEffect(()=>{
 },[]);
 if(postArr.length==0) return "<h1>There is No Data</h1>";
 
-function updateDetails() {
+// update
+function updateDetails(id) {
+  setUpdateisShown(current => !current);
+  let fname=document.getElementById("fname").value
+  let descrip=document.getElementById("descrip").value
     Axios
-      .put(`${baseUrl}/9`, {
-        name: "Hello World9!",
-        desc: "This is an updated post9."
+      .put(`${baseUrl}/${id}`, {
+        name: fname,
+        desc: descrip,
       })
       .then((response) => {
-        setPost(response.data);
+        //setPostArr(response.data);
+        
       });
   }
 
-  function deletePost() {
+
+  //  Delete Operation
+  const deleteHandler = (id) => {
+ 
+    console.log(id);
+    Axios.delete(`${baseUrl}/${id}`).then(() => {
+      let newArry = postArr.filter(data => data.id !== id)
+      setPostArr(newArry);
       
-    Axios
-      .delete(`${baseUrl}/9`)
-      .then(() => {
-        alert("Post deleted!");
-        setPost(null)
-      });
-  }
+    });
+}
+
+// view
+function viewHandler(id){
+  setIsShown(current => !current);
+  Axios.get(`${baseUrl}/${id}`).then((response) => {
+          setPostDetail(response.data);
+  });
+}
 
 return (
     <div className="container">
+      <div className="div1">
         <h1>All Post ({postArr.length})</h1>
         <div className="content1">
         <ul>
         
-        {postArr.map((post)=><li>{post.name}<p><button >View</button><button onClick={updateDetails}>Update</button><button onClick={deletePost}>Delete</button></p></li>)}        
+        {postArr.map((post)=><li>{post.name}<p><button onClick={() => viewHandler(post.id)} >View</button><button onClick={() => updateDetails(post.id)}>Update</button><button onClick={() => deleteHandler(post.id)}>Delete</button></p></li>)}        
         </ul>
         </div>
+        </div>
 
-       
+<div className='view-post' style={{display: isShown ? 'none' : 'block'}}>
+<h1>View Details</h1>
+<p>ID : {postdetail.id}</p>
+<p>Name : {postdetail.name}</p>
+<p>Description : {postdetail.desc}</p>
+</div>
+
+    <div className="update-div" style={{display: updateisShown ? 'none' : 'block'}}>
+     <h2>Enter details to be Updated</h2> 
+    <label for="fname">Name:</label>
+    <input type="text" id="fname" name="fname"/><br/>
+     <label for="description">Description:</label>
+      <input type="text" id="descrip" name="lname"/><br/>
+      </div>   
+
       </div>
   )
 }

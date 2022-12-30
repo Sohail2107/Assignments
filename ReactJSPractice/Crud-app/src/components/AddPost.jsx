@@ -33,7 +33,6 @@ const AddPost = () => {
 
             setDesc("");
 
-            alert(response.data);
 
         }).catch((error)=>{
 
