@@ -3,8 +3,7 @@ package com.question;
 public class Test {
 	
 	// Method to deposit money
-		public static int amountDeposited(int balance,
-										int depositAmount)
+		public static int amountDeposited(int balance,int depositAmount)
 		{
 			System.out.println("Deposit Operation:");
 			System.out.println("Amount to deposit : "
@@ -17,8 +16,7 @@ public class Test {
 		}
 
 	// Method to withdraw money
-	public static int amountWithdrawn(int balance,
-										int withdrawAmount)
+	public static int amountWithdrawn(int balance,int withdrawAmount)
 	{
 		System.out.println("Withdrawn Operation:");
 		System.out.println("Withdrawing Amount : "
