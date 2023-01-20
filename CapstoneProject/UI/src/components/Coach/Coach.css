@@ -1,0 +1,25 @@
+.coach-img{
+    width: 13rem;
+    height:13rem;
+    border-radius: 2rem;
+
+}
+
+.coach-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    justify-content: space-evenly;
+    background-color: black;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.btn:hover{
+    background-color: gray;
+}

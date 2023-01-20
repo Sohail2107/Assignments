@@ -1,0 +1,28 @@
+.user-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20rem;
+    height: 20rem;
+    background-color: black;
+    
+}
+
+.user-img{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 2rem;
+}
+.Userbtn-container{
+   display: flex;
+   flex-direction: column;
+}
+
+.btn{
+    width: 18rem;
+    height: 2rem;
+    background-color: blueviolet;
+    font-family: cursive;
+    font-size: 1rem;
+}

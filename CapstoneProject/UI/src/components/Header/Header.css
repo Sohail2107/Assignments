@@ -1,0 +1,19 @@
+.header-container{
+    display: flex;
+    align-items: center;
+    background-color: black;  
+    color: white;  
+    justify-content: space-between;
+}
+
+.leftside{
+    font-weight: 700;
+    font-family: cursive;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.rightside{
+    
+    margin-right: 2rem;
+}

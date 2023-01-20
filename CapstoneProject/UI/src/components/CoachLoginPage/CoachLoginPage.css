@@ -1,0 +1,30 @@
+.coach-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    justify-content: space-evenly;
+    background-color: black;
+    margin: auto;
+    margin-top: 4rem;
+
+}
+
+h2{
+    color: white;
+}
+.form-input{
+    width: 17.4rem;
+}
+.btn-submit{
+    width: 100%;
+
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+   
+}
