@@ -8,6 +8,7 @@ import CoachLoginPage from './components/CoachLoginPage/CoachLoginPage';
 import UserLoginPage from './components/UserLoginPage/UserLoginPage';
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,8 +18,7 @@ function App() {
       <Route path="/coachSignUp" element={<CoachSignUp/>}/>
       <Route path="/coachLogin" element={<CoachLoginPage/>}/>
       <Route path="/userLogin" element={<UserLoginPage/>}/>
-  
-
+      
       </Routes>
       
     </div>

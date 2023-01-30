@@ -20,7 +20,7 @@ function CoachSignUp() {
   }
   const coachSignupSubmitHandler = async (event) => {
     event.preventDefault();
-    await axios.post("http://localhost:8083/api/coach/createCoach", coach).then((response)=>{
+    await axios.post("http://localhost:9090/create-coach-service/api/coach/createCoach", coach).then((response)=>{
         console.log(response);
         
       
