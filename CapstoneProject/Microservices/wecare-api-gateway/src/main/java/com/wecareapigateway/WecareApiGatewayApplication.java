@@ -15,15 +15,4 @@ public class WecareApiGatewayApplication {
 		SpringApplication.run(WecareApiGatewayApplication.class, args);
 	}
 
-//	@Bean
-//	public WebMvcConfigurer corsConfigurer() {
-//
-//	    return new WebMvcConfigurer() {
-//
-//	        @Override
-//	        public void addCorsMappings(CorsRegistry corsRegistry) {
-//	            corsRegistry.addMapping("/**").allowedOrigins("http://localhost:3000");
-//	        }
-//	    };
-//	}
 }
