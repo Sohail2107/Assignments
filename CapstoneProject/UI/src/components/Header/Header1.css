@@ -12,11 +12,18 @@
     font-size: 1.5rem;
     margin-left: 2rem;
 }
-.leftside:hover{
-    color: brown;
-}
 
 .rightside{
     
     margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+p{
+    margin: 10px;
+}
+
+p:hover{
+    color: brown;
 }

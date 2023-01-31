@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { useNavigate } from 'react-router'
 
-function UserLoginPage() {
+function UserLoginPage(props) {
+  const navigate = useNavigate();
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
 
@@ -14,15 +16,17 @@ function UserLoginPage() {
     }
     const addPostHandler =()=>{
 
-        axios.get(`http://localhost:9090/user-login-service/api/user/userlogin/${id}/${password}`).then((response)=>{
+        axios.get(`http://localhost:8082/api/user/userlogin/${id}/${password}`).then((response)=>{
 
           console.log(response);
 
           setId("");
 
           setPassword("");
+          props.setUserId(id);
     if(response.status==200){
         console.log('success');
+        navigate('/userhome')
     }
 
         }

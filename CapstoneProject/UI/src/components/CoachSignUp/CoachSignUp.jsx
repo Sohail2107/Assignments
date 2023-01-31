@@ -8,19 +8,22 @@ import Footer from '../Footer/Footer'
 import { useNavigate } from 'react-router'
 
 function CoachSignUp() {
-
+    const navigate = useNavigate();
   const initialState = { name:"", password:"", dateOfBirth:"", gender:"", mobileNumber:"", speciality:"" }; 
   const [coach, setCoach] = useState(initialState);  
   const { name, password, dateOfBirth, gender, mobileNumber, speciality } = coach;  
   const [homePage,setHomePage] = useState(true)
  const [response,setResponse] = useState(null)
 
+ const coachLogin = () => {
+    navigate('/coachLogin');
+  }
   const onChangeInput = (event) => {
     setCoach({...coach, [event.target.name] : event.target.value})
   }
   const coachSignupSubmitHandler = async (event) => {
     event.preventDefault();
-    await axios.post("http://localhost:9090/create-coach-service/api/coach/createCoach", coach).then((response)=>{
+    await axios.post("http://localhost:8083/api/coach/createCoach", coach).then((response)=>{
         console.log(response);
         
       
@@ -126,8 +129,8 @@ function CoachSignUp() {
                 
               <img className="coach-signup-img" src={coachimg} alt="coach-signup-img"/>
               <h2>You are a coach now !!</h2>
-              <h4>Your coach id is {response?.data}</h4>
-              <button className="login-btn">Login now</button>
+              {/* <h4>Your coach id is {response?.data}</h4> */}
+              <button className="login-btn" onClick={() => { coachLogin()}}>Login now</button>
               
            </div>
            <Footer/>

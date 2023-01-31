@@ -9,13 +9,16 @@ function User() {
   const userLogin = () =>{
     navigate('/userLogin');
   }
+  const userSignUp = () =>{
+    navigate('/userSignUp');
+  }
 
   return (
     <div className="user-container">
         <img src={user} className="user-img"/>
         <div className="Userbtn-container">
         <button className="btn" onClick={()=>{userLogin()}}>Login as a User</button>
-        <button className="btn">Join as a User</button>
+        <button className="btn"onClick={()=>{userSignUp()}}>Join as a User</button>
         </div>
     </div>
   )

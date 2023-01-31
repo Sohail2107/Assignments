@@ -5,9 +5,10 @@ import axios from 'axios'
 import './CoachLoginPage.css'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { useNavigate } from 'react-router'
 
-function CoachLoginPage() {  
-   
+function CoachLoginPage(props) {  
+        const navigate = useNavigate();
         const [id, setId] = useState('');
         const [password, setPassword] = useState('');
     
@@ -16,15 +17,17 @@ function CoachLoginPage() {
         }
         const addPostHandler =()=>{
     
-            axios.get(`http://localhost:9090/coach-login-service/api/coach/coachlogin/${id}/${password}`).then((response)=>{
+            axios.get(`http://localhost:8084/api/coach/coachlogin/${id}/${password}`).then((response)=>{
     
               console.log(response);
     
               setId("");
     
               setPassword("");
+              props.setCoachId(id);
         if(response.status==200){
             console.log('success');
+            navigate('/coachhome')
         }
     
             }
