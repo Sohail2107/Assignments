@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.createcoach.app.request.CreateCoachRequest;
 import com.createcoach.app.response.CoachResponse;
 import com.createcoach.app.service.CoachService;
 
-@CrossOrigin(origins="*")
+@CrossOrigin(origins ="http://localhost:3000", methods={RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT})
 @RestController
 @RequestMapping("/api/coach")
 public class CoachController {
