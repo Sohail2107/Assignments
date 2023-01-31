@@ -22,7 +22,7 @@ public class CreateUserRequest {
 	@NotBlank(message = "Email is mandatory")
 	private String email;
 	
-	@NotNull(message = "The date of birth is required.")
+	//@NotNull(message = "The date of birth is required.")
 	//@Past(message = "The date of birth must be in the past.")
 	private String dateOfBirth;
 	
