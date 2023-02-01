@@ -10,6 +10,9 @@ import UserSignup from './components/UserSignUp/UserSignUp';
 import CoachHome from './components/CoachHome/CoachHome';
 import { useState } from 'react'
 import UserHome from './components/UserHome/UserHome';
+import CoachSchedule from './components/CoachSchedule/CoachSchedule';
+import UserAppointment from './components/UserAppointment/UserAppointment';
+import UserAppointmentSuccess from './components/UserAppointment/UserAppointmentSuccess';
 
 
 function App() {
@@ -26,7 +29,10 @@ function App() {
       <Route path="/userSignUp" element={<UserSignup/>}/>
       <Route path="/coachhome" element={<CoachHome coachId={coachId}/>}/>
       <Route path="/userhome" element={<UserHome userId={userId}/>}/>
-      coachhome
+      <Route path="/coachSchedule" element={<CoachSchedule/>}/>
+      <Route path="/userAppointment" element={<UserAppointment/>}/>
+      <Route path="/appointmentBooked" element={<UserAppointmentSuccess/>}/>
+      
       
       </Routes>
       

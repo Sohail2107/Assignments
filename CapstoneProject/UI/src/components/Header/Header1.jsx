@@ -10,12 +10,18 @@ function Header() {
     const gohomepage = () =>{
         navigate('/home');
       }
+      const goschedule = () =>{
+        navigate('/coachSchedule');
+      }
+      const goprofile = () =>{
+        navigate('/coachhome');
+      }
   return (
     <div className="header-container">
         <div className="leftside" onClick={()=>{gohomepage()}}>WeCare</div>
         <div className="rightside">
-        <p>View Profile</p>
-        <p>My Schedules</p>
+        <p onClick={()=>{goprofile()}}>View Profile</p>
+        <p onClick={()=>{goschedule()}}>My Schedules</p>
           <p>Call Us : 0002233447</p>
           <p className="btn-logout" onClick={()=>{coachLogout()}}>LogOut</p>
         </div>

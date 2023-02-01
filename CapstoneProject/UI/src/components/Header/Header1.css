@@ -26,4 +26,5 @@ p{
 
 p:hover{
     color: brown;
+    cursor: pointer;
 }
